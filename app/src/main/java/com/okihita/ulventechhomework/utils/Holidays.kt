@@ -1,11 +1,9 @@
 package com.okihita.ulventechhomework.utils
 
-import android.util.Log
 import com.okihita.ulventechhomework.model.model.HolidayLocalDate
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.Month
-import kotlin.math.log
 
 class Holidays {
 
@@ -62,7 +60,9 @@ class Holidays {
 
             }
 
-            return holidays
+            return holidays.sortedBy {
+                it.localDate
+            }
         }
     }
 }
